@@ -119,3 +119,163 @@ if(userScore > highScore) {
 else {
     console.log(`Good Game, your score of ${userScore} did not beat the high score of ${highScore}`)
 }
+
+/*
+NESTING CONDITIONALS 
+
+We can nest conditionals inside conditionals. 
+
+We can use nesting to see if multiple conditions are true. 
+
+We can add in additional else if statements within our original if and else statements. 
+
+There is nothing wrong with nesting, but there are better ways to do conditionals!
+*/
+//example 1 
+
+let password = "cat dog";
+if (password.length >= 6) {
+    if (password.indexOf(" ") !== -1) {
+        console.log("Password cannot include spaces"); 
+    }
+    else {
+        console.log("Valid Password!")
+    }
+}
+else {
+    console.log("Password too short!")
+};
+
+/*
+TRUTHY AND FALSY VALUES 
+
+All Values have an inherent truthy or falsy boolean value! 
+
+Falsy Values 
+
+false 
+0
+"" (empty string)
+null
+undefined
+Nan
+
+everything else is truthy! 
+*/ 
+//example 1 
+let mystery = 5; 
+    if(mystery){
+        console.log("Truthy");
+}
+    else {
+        console.log("Falsy");
+}
+//example 2 
+
+let loggedInUser = true;
+    if(loggedInUser){
+        console.log("You are logged in");
+}
+    else{
+        console.log("Please log in");
+}
+
+/*
+LOGICAL OPERATORS  
+
+&& - AND - And is when both sides must be true in order for the whole thing to be true. 
+|| - OR - uses the pipe character. If one side is true, it will evaluate the whole thing as true.
+! - NOT 
+*/
+
+/*
+Examples of AND && OPERATOR 
+1 <= 4 && "a" === "a"; true
+9 > 10 && 9 >= 9; false 
+"abc".length === 3 && 1+1 === 4; false 
+*/
+//example 1
+let passwords = "chickenGal"; 
+
+if(passwords.length >= 8 && passwords.indexOf(" ") === -1) {
+    console.log("VALID PASSWORD")
+}
+else {
+    console.log("INVALID PASSWORD")
+}
+
+let nums = 3;
+
+//example 2 
+
+if(nums >= 1 && nums <= 10) {
+    console.log("number is between 1 and 10")
+}
+else {
+    console.log("please guess a number between 1 and 10!")
+};
+
+/*
+EXAMPLES OF OR || OPERATOR
+
+1 !== 1 || 10 === 10; true 
+10/2 == 5 || null; true 
+0 || undefined; false 
+
+*/
+
+//example 1 of OR operator 
+
+let age = 76; 
+
+    if(age < 6 || age >= 65) {
+        console.log("You get in for free")
+}
+    else {
+        console.log("YOU MUST PAY!")
+}
+
+//example 2 of OR operator 
+
+//purple orchid violet 
+
+let color = "violet";
+    if(color === "purple" || color === "violet" || color === "lilac") {
+        console.log("GREAT CHOICE!")
+}
+
+/*
+EXAMPLES OF NOT OPERATOR ! 
+
+!null; = true 
+! (0 === 0) = false 
+! (3 <= 4) = false 
+*/
+
+//example 1 of NOT operator 
+
+//we can use NOT if we are just checking for one condition.
+
+let isUserLoggedIn; 
+    if (!isUserLoggedIn){
+        console.log("Get out of here!");
+}
+
+//example 2 
+
+let flavor = "grape"; 
+    if(flavor !== "grape" || flavor !== "cherry") {
+        console.log("we don't have that flavour!")
+    }
+//example 3 - We can write this a diffrent way 
+
+let flavours = "watermelon"; 
+    if(!(flavours === "grape" || flavours === "cherry")) {
+        console.log("we only have grape and cherry!")
+    }
+
+/*
+OPERATOR PRECEDENCE 
+
+
+*/
