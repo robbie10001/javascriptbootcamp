@@ -67,6 +67,23 @@ There are certain words that we cannot use in JS, especially keywords.
 We should make our variable names make sense
 We also name our variables using camel case. 
 This means that we capitalise the first letter of each new word. 
-For example, let numOfHens = 6; 
+For example, 
+let numOfHens = 6; 
+*/
+
+/*
+UNARY OPERATORS 
+Instead of doing something like hens = hens + 1;
+We could do this in a faster way. 
+For example,
+hens -= 1, this is the same as the logner method.
+We can do this using other mathematical operators.
+
+Another method we can use, which can be useful when we are using a counter for example, 
+We can use a unary operator! 
+For example, 
+let counter = 0; 
+counter++; 
+this would make counter equal 1. 
 
 */
