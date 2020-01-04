@@ -277,5 +277,104 @@ let flavours = "watermelon";
 /*
 OPERATOR PRECEDENCE 
 
+! has a higher precedence than && and || 
+&& has higher precedence than || 
+This can be altered through the use of parenthisis.
 
 */
+
+//example 1 
+
+let x = 7; 
+x == 7 || x === 3 && x > 10; 
+//this evaluates to true! 
+//This is because of the order of precedence. 
+//In order to make this code run the way we think it should, we would use parenthisis. 
+
+//example 2 
+
+//lets x = 7;
+//(x == 7 || x === 3) && x > 10;
+//this evaluates to false! 
+//adding in parenthisis is a sure fire way to avoid the problems in the first exercise.
+
+/*
+SWITCH STATEMENTS 
+
+
+*/
+
+let day = 3; 
+
+if(day === 1) {
+    console.log("MONDAY");
+}
+else if (day == 2) {
+    console.log("Tuesday");
+}
+else if (day === 3) {
+    console.log("Wedensday");
+}
+else {
+    console.log("INVALID STATEMENT");
+};
+
+//WE CAN USE A SWITCH STATEMENT TO MAKE THIS EASIER, FOR EXAMPLE 
+
+//let day = 3; 
+switch (day){
+    case 1: 
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3: 
+        console.log("Wedensday");
+        break;
+    default:
+        console.log("Invalid Day");
+}
+
+/*
+TERNARY OPERATOR
+
+This is a way of taking an if and an else and making into a single line of code. 
+
+condition (?) iftrue : iffalse : 
+
+for example,
+
+*/
+
+let numbers = 8; 
+
+if (numbers === 8) {
+    console.log("lucky"); 
+}
+else {
+    console.log("unlucky")
+}
+
+//The same code can be written as a single line. 
+
+numbers === 7 ? console.log("lucky") : console.log("unlucky");
+
+//example 2 
+/*
+
+let status = "offline";
+
+let color; 
+    if(status === "offline") {
+        color = "red";
+    }
+    else {
+        color = "green";
+    };
+
+*/
+//This is the same as the code above! 
+let status = "offline";
+
+let colours = status === "offline" ? "red" : "green";
