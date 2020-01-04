@@ -9,5 +9,9 @@ TC39, is a technical committee that is in charge of maintaining and evolving the
 ES6  took almost 6 years to release. Many features were ready sooner but had to wait for the main release. After this, they decided to release changes yearly. 
  
 caniuse.com - is a good website to see if a feature of ECMAscript we are using is available in a given browser. 
+
+While there is no an offical javascript we use, a good place o et information is 
+
+MDN! - This is a really good resource for Javascript developers. 
 */
 
