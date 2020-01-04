@@ -69,6 +69,8 @@ We also name our variables using camel case.
 This means that we capitalise the first letter of each new word. 
 For example, 
 let numOfHens = 6; 
+
+Another important aspect of JS is that we can change the data type of a variable that we have defined! 
 */
 
 /*
