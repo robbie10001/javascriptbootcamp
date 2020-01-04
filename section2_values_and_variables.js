@@ -87,3 +87,51 @@ counter++;
 this would make counter equal 1. 
 
 */
+
+/*
+CONST 
+
+const works just like let, except you CANNOT CHANGE THE VALUE. 
+const is short for constant. Don't use const unless you are sure you don't want to change the value of your variable! 
+We use const for things like pi(a constant), daysInTheWeek(will always be the same), minHeightInARide(never changes).
+const actually has more uses that we will see later in the course. 
+*/
+
+/*
+VAR 
+
+Before let and const, var was the only way to declare variables. 
+We can still use var, but it's not ideal. 
+These days, there really isn't a really reason to use it.
+
+var egg = 12; 
+
+*/
+
+/*
+VARIABLE QUIZ 
+
+What is the value of eggCount? 
+
+let eggCount = 42; 
+eggCount + 2; 
+
+My Answer- the answer will still 42 as we are not saving the changes within a variable.
+correct answer- The correct answer remains 42.
+
+What is the value of rating after this code runs?
+
+const rating = 7.5; 
+rating = 8; 
+
+My Answer- this will throw an error because we are trying to change the value of a constant. The value of rating will remain 7.5
+correct answer- We caught an error, and the value of rating stays the same. 
+
+What's the value of wind_speed? 
+
+My Answer- While wind_speed is not defined using standard convention, i still think it is valid. We then add 5 to the value of wind_speed then remove 1. Therefore the value of windspeed should be 80. 
+correct answer- Windspeed equals 80, the issue with the code is that style doesn't follow js conventions. 
+
+
+
+*/
