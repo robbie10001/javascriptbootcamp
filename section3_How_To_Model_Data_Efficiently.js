@@ -222,9 +222,67 @@ let quantity = 4;
 
 `you bought ${quantity} of ${item}, total price: $${price*quantity}`;
 == "you bought 4 cucumbers, total price $7.96"
-`
 
+*/
 
+/*
+NULL AND UNDEFINED
 
+These represent the lack of a value but their are differences between them. 
 
+Null = the intentinal absense of any value. For example, 
+
+//no one is logged in yet
+let loggedInUser = null, //value is explicitly nothing
+//a user logs in...
+loggedInUser = "Alan Rickman";
+
+Undefined = Variables that do not have an assigned value assigned to it. 
+
+Normally, undefined is a value that we get back from JavaScript. 
+*/
+
+/*
+The MATH OBJECT AND RANDOM NUMBERS 
+
+The Math object contains properties and methods for mathematical constants and functions. 
+
+Math.round(4.9) = 5 (rounding a number)
+Math.abs(-456) = 456 (absolute value)
+Math.pow(2,5) = 32 (raises 2 to the 5th power)
+Math.floor(3.9999) = 3 (removes decimal)
+Math.PI = 3.14159 (gives us the value of PI)
+Math.random(); (gives us a random decimal between 0 and 1 (non-inclusive))
+
+Say we want to make a random integer generate between 1 and 10. We would do the following. 
+
+const step1 = Math.random();
+const step2 = step1 * 10
+const step3 = Math.floor(step2);
+const step4 = step 3 + 1;
+
+Math.floor(Math.randm() * 10) + 1;
+*/
+
+/*
+typeof Operator 
+
+The syntax for typeof is lowercase and with parenthisis. 
+It is an operator! so it doesn't need them.  
+
+typeof 99 = "number"
+typeof true = "boolean"
+typeof "99 mystery" = "string"
+*/
+/*
+parseInt & parseFloat
+
+This is used to parse strings into numbers, but watch out for NaN! 
+
+parseInt("24") = 24
+parseInt("28dayslater") = 28 
+
+parseFloat("24.89") = 24.89
+parseFloat("7") = 7 
+parseFloat("i ate 3 shramp") = NaN
 */
