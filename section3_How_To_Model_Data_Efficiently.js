@@ -188,7 +188,43 @@ What does this evaluate to?
 
 my answer ="RAGE"
 
+*/
+
+/*
+STRING ESCAPES 
+
+\n = newline 
+\' = single quote 
+\" = double quote 
+\\ = backslash - this allows us to just put a regular backslash in our code (\)
+*/
+
+/*
+STRING TEMPLATE LITERALS 
+
+Template literals are strings the allow embedded expressions, which will be evaluated and then turned into a resulting string. For example, 
+
+`I counted ${3 + 4} sheep` = I counted 7 sheep
+
+ For template literals we use back-ticks not single quotes. 
+
+ The use of template literals is that they allow us to embed information.
+
+ let animal = "pig";
+ let sound = "oink";
+ `${animal} says ${sound}` = "pig says oink"
+
+ What we are doing here is string interpolation. 
+
+let item = "cucumbers";
+let price = 1.99;
+let quantity = 4; 
+
+`you bought ${quantity} of ${item}, total price: $${price*quantity}`;
+== "you bought 4 cucumbers, total price $7.96"
+`
 
 
 
 
+*/
