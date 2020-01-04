@@ -44,5 +44,29 @@ SIMPLE OPERATIONS
 */
 
 /*
+Variables and Let
+- Variables are like labeled jars for a value in JS. 
+- We can store a value and give it a name, so that we can recall it, use it, or change it later on. 
+
+let someName = value; 
+
+if i wanted to give my father's age. 
+
+let fatherAge = 70; 
+
+UPDATING VARIABLES  
+
+let hens = 4; 
+//a raccon kills a hen 
+hens = hens - 1; 
+//this changes the value of hens too 3.
+
+NAMING VARIABLES 
+
+There are certain words that we cannot use in JS, especially keywords. 
+We should make our variable names make sense
+We also name our variables using camel case. 
+This means that we capitalise the first letter of each new word. 
+For example, let numOfHens = 6; 
 
 */
