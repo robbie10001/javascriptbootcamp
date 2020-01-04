@@ -145,3 +145,50 @@ replace() = allows you to specify what you want to replace and what you want to 
 We can also use replace to remove things universally, but this requires the use of REGEX. 
 
 */
+
+/*
+VARIABLE QUIZ
+
+What is the value of age?
+
+const age = "5" + "4";
+my answer = because it is a string the answer will be "54";
+
+what does this evaluate to?
+
+"pecan pie"[7]
+my answer = "i"
+
+What does this evaluate to 
+
+"PUP"[3]; 
+
+my answer = undefined
+
+What is the value of song?
+
+let song = "london calling"; 
+song.toUpperCase();
+
+my answer= it doesn't change.
+
+What is the value of cleanedInput?
+
+my answer = "todd@gmail.com"
+
+What is the value of index?
+
+my answer = - 1 
+
+What is the value of index
+
+my answer = 7
+
+What does this evaluate to? 
+
+my answer ="RAGE"
+
+
+
+
+
