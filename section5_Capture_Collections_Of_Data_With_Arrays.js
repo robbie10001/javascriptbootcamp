@@ -123,9 +123,6 @@ MORE ARRAY METHODS!
 
 concat - use to merges two or more arrays. 
 
-join - creates a string from an array 
-reverse - reverse an array 
-slice - copies a porition of an array 
 splice - remove/replaces elements within an array 
 sort - sorts an array. 
 
@@ -168,8 +165,44 @@ console.log(foods.indexOf("bread")); //-1
 console.log(foods.indexOf("shrimp", 2)); //3 
 console.log(foods.indexOf("water", 2)); //-1
 
+/*
 
+reverse - reverses an array in place, it doesn't make a copy. It mutates the original array. 
+join - creates a string from an array. It takes an array and spits out a string. 
+where it joins all the elements of that array into a single string. 
 
+*/
+
+let letters = ["a", "b", "c", "d", "e"]
+letters.reverse();
+console.log(letters); //[ 'e', 'd', 'c', 'b', 'a' ]
+
+let lettersJoin = ["a", "b", "c", "d", "e"];
+console.log(lettersJoin.join()) //a,b,c,d,e
+//the default seperator between the values is commas, however we can change that. 
+console.log(lettersJoin.join("&")) //a&b&c&d&e
+//we can also combine our methods. 
+console.log(lettersJoin.reverse().join(".")) //e.d.c.b.a
+//what if we try to join something that is not a string? Well it turns the data into a string. 
+let alwaysIntoString = [6, "six", true, [6]]
+console.log(alwaysIntoString.join()) //6,six,true,6
+
+/*
+slice - takes a portion of an array and makes a new array with it. 
+It doesn't modify the original array. It allows us to select or copy a part of an array into a new array.  
+
+*/
+
+let animals = ["sharks", "salmon", "whale", "bear", "lizard", "tortoise"];
+let swimmers = animals.slice(0, 3); //[ 'sharks', 'salmon', 'whale' ]
+let mammals = animals.slice(2, 4); //[ 'whale', 'bear' ]
+let reptiles = animals.slice(4, 6) // [ 'lizard', 'tortoise' ]
+//we can also write it differently, by passing in only a single argument. 
+let singleArgument = animals.slice(3) //[ 'bear', 'lizard', 'tortoise' ]
+//we can also pass in a negative number, this works backwards from the end of the array. 
+let backwards = animals.slice(-5) //[ 'salmon', 'whale', 'bear', 'lizard', 'tortoise' ]
+//if we just call .slice, we will just copy the original array. 
+let copy = animals.slice(); //[ 'sharks', 'salmon', 'whale', 'bear', 'lizard', 'tortoise' ]
 
 
 
