@@ -122,10 +122,6 @@ console.log(dishesToDo)
 MORE ARRAY METHODS! 
 
 concat - use to merges two or more arrays. 
-
-splice - remove/replaces elements within an array 
-sort - sorts an array. 
-
 */ 
 
 let fruits = ["apple", "banana"];
@@ -203,6 +199,63 @@ let singleArgument = animals.slice(3) //[ 'bear', 'lizard', 'tortoise' ]
 let backwards = animals.slice(-5) //[ 'salmon', 'whale', 'bear', 'lizard', 'tortoise' ]
 //if we just call .slice, we will just copy the original array. 
 let copy = animals.slice(); //[ 'sharks', 'salmon', 'whale', 'bear', 'lizard', 'tortoise' ]
+
+/*
+splice - either removes elements, replaces elements or addes new elements to an array.
+if we want to update an array we can use splice. 
+The splice method takes three arguements, the start index, how many things we want to delete, and what we want to insert. 
+We don't have to insert or delete anything but we can. 
+*/
+
+let people = ["robbie", "craig", "caza", "sonia", "bruce", "harry", "sam"];
+//people.splice(first argument = where we want to start removing or inserting, second argument how many things i want to delete, third argument what we want to add)
+people.splice(1, 0, "max");
+//AT THE FIRST ELEMENT OF THE ARRAY, WE ADD, "max"
+//splice returned an empty array, this is because we didn't delete anything. 
+console.log(people); //[ 'robbie', 'max', 'craig', 'caza', 'sonia', 'bruce', 'harry', 'sam' ]
+//we can see that max has been added to the second element of the array. 
+let peoples = ["robbie", "craig", "caza", "sonia", "bruce", "harry", "sam"];
+peoples.splice(3, 2);
+//AT INDEX OF 3, REMOVE TWO ITEMS 
+console.log(peoples); //[ 'robbie', 'craig', 'caza', 'sonia', 'bruce', 'harry', 'sam' ]
+//sonia and bruce have been removed from the array! 
+let peps = ["robbie", "craig", "caza", "sonia", "bruce", "harry", "sam"];
+peps.splice(3, 0, "mark", "lyn");
+console.log(peps); //we have added mark and lyn to the array after caz. 
+//AT THE THIRD ELEMENT OF THE ARRAY, WE ADD, "MARK, LYN"
+//We can use splice to replace. 
+let homoErectus = ["robbie", "craig", "caza", "sonia", "bruce", "harry", "sam"];
+homoErectus.splice(0, 2, "FRANKY", "MATTHEW")
+//AT THE FIRST ELEMENT OF THE ARRAY, WE REMOVE TWO ELEMENTS, AND ADD "FRANKY, MATTHEW"
+console.log(homoErectus); //we have removed robbie and craig from the array and added FRANKY and MATTHEW
+
+/*
+sort - sorts an array. The way sort works is a bit surprising. 
+
+*/
+
+let womensNames = ["Mrs. Robinson", "Angie", "Jolene", "Maggie May", "Roxanne"];
+womensNames.sort()
+//we can see that the array has been sorted into alphebetical order.
+//the array is mutated and the value of the array is also returned. 
+console.log(womensNames); //[ 'Angie', 'Jolene', 'Maggie May', 'Mrs. Robinson', 'Roxanne' ]
+//it gets tricky when we have an array for example of numbers. 
+numbers = [34, 10, 10000, 67, 99];
+numbers.sort();
+console.log(numbers) //[ 10, 10000, 34, 67, 99 ]
+//.sort is not ordering by the numerically value. 
+//instead .sort converts all of these numbers into a string. 
+// it then compaires each string element by their character codes. 
+// this is the default behaviour of the .sort method. Hardly anybody in the community use .sort this way. 
+// instead, they pass in a COMPARE FUNCTION.
+//You do this by passing in a function that tells .sort how to sort. 
+
+/*
+INTRODUCTION TO REFERENCE TYPES  
+
+*/
+
+
 
 
 
