@@ -252,9 +252,41 @@ console.log(numbers) //[ 10, 10000, 34, 67, 99 ]
 
 /*
 INTRODUCTION TO REFERENCE TYPES  
-
 */
+let food = "oranges"
+let color = food;
+console.log(food); //oranges
+console.log(color); //oranges  
+food = "watermelon" 
+console.log(food) //watermelons
+/*
+What we are doing above is storing values into variables. 
+Initially color is set to the same value as food.
+but then we changed the value of food. 
+However, that didn't effect the value of color. 
+That's because these are not linked because they are primative datatypes. 
+When we work with PRIMATIVE TYPES and create a variable to hold them we are creating a VALUE TYPE VARIABLE.
+This means that is memory JS, is storing all of these variables. 
+When we work with a VALUE TYPE VARIABLE the actual value is stored in memory. 
+If we use a primative type, the value itself is what is stored in memory. 
 
+However, for large things like array this is not how it works. 
+JS instead of storing the value of the array instead stores a reference to the array. 
+We can think of this reference as a string of numbers which is a memory address. 
+we can't see it, but when we work with arrays and we put them in a variable, the variable itself doesn't hold the array. 
+it holds a reference to where the array is in memory. 
+*/
+ let nums = [5,6,7,8] // [5,6,7,8]
+ //nums equals some reference in memory 
+ let otherNums = nums; // [5, 6, 7, 8]
+ //otherNumbers has the same reference to nums.
+ //This means if we change nums, otherNums will change as well. 
+ nums.push(9) 
+ console.log(nums); //[ 5, 6, 7, 8, 9 ]
+ console.log(otherNums); //[ 5, 6, 7, 8, 9 ] 
+ //both nums and otherNums where update just by changing the value of nums. This is called mutation.
+ //This is very important for when we are working with arrays and objects! 
+ 
 
 
 
