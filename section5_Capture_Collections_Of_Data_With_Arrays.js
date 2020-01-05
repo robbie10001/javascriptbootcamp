@@ -72,8 +72,7 @@ ARRAY METHODS
 
 Push = add to end of array 
 Pop = remove from end of array 
-Shift = remove from start of array 
-Unshift = add to start  of array 
+
 
 */
 
@@ -87,6 +86,7 @@ let topSongs = [
 topSongs.push["Fortunate Son"] //array = "first time ever i saw you face", "god only knows", "a day in the life", "life on mars", "fourtunate son"
 //when we use the push method with the array we are actually chamging the data in the array, this is different from strnigs, 
 //in which we would have to save the additional data in a new variable. 
+//we can add multiple elements in with push, with the same order that we enter them into the array. 
 
 topSongs.pop() //array = "first time ever i saw you face", "god only knows", "a day in the life", "life on mars"
 //.pop removes the last item and returns to us the value that we have removed. 
@@ -95,6 +95,26 @@ const nextSong = topSongs.pop();
 console.log(nextSong);//"a day in the life"
 console.log(topSongs);//[ 'first time ever i saw you face', 'god only knows' ]
 
+/*
+ARRAY METHODS 
+ 
+Shift = remove from start of array //very similar to push, but adds to the beginning of the array and returns the removed element.
+Unshift = add to start of array very similar in function to pop.
 
+*/
+
+let dishesToDo = ["big platter"]  //dishToDo =  'big platter', 
+dishesToDo.unshift("large plate") //dishtodo = [ 'large plate', 'big platter' ]
+dishesToDo.unshift("small plate") //dishtodo = [ 'small plate', 'large plate', 'big platter' ]
+dishesToDo.unshift("cereal bowl") //dishToDo = [ 'cereal bowl', 'small plate', 'large plate', 'big platter' ]
+//with unshift, we can actually add in more than one element at a time! These are order but the order that we put them into the array. 
+console.log(dishesToDo)
+
+//
+dishesToDo.shift() //dishesToDo = [ 'small plate', 'large plate', 'big platter' ]
+dishesToDo.shift() //dishesToDo = [ 'large plate', 'big platter' ]
+dishesToDo.shift() //dishesToDo = [ 'big platter' ]
+dishesToDo.shift() //dishesToDo = []
+console.log(dishesToDo)
 
 
