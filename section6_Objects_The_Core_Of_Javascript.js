@@ -55,12 +55,32 @@ const objective = {
     text: "great post!"
 };
 
-
-
 /*
 CREATING OBJECT LIERALS 
 
+To signify an object we use curly braces. 
+Just like with arrays, when we store an object into a variable, its a reference to that object. 
+Just like with arrays, pepole use const all the time when creating objects.
+We can store many different datatypes into objects. Be it strings, numbers, booleans, arrays or even other objects. 
+When we create an object our keys are automatically converted into strings. Except for symbols
+If we define a object with a single property we don't need a comma (althugh we can add a comma)
+However, if we have multiple properties in our object, we need a comma.
 */
+
+const fitBitData = {
+    //name we want to store it under followed by a colon.
+    //then the value. We need to make sure to end in a comma after every key-value pair.
+    totalSteps: 308727,
+    totalMiles: 211.7,
+    avgCalorieBurn: 5755,
+    workoutsThisWeek: "5 of 7",
+    avgCalorieBurn: "2:13"
+};
+console.log(fitBitData)//{ totalSteps: 308727, totalMiles: 211.7, avgCalorieBurn: '2:13',workoutsThisWeek: '5 of 7' }
+//to access information within an object we can use the dot syntax. For example, 
+//.length 
+console.log(fitBitData.totalMiles) //211.7
+console.log(fitBitData.avgCalorieBurn) //2:13
 
 /*
 ACCESSING OBJECT PROPERTIES 
