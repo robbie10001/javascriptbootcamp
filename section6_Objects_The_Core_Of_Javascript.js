@@ -85,7 +85,45 @@ console.log(fitBitData.avgCalorieBurn) //2:13
 /*
 ACCESSING OBJECT PROPERTIES 
 
+WE can attempt to use different datatypes as a key, but it will be turned into a string.
+
 */
+const numbers = {
+    100 : "one hundred",
+    16: "sixteen",
+};
+//console.log(numbers.100)//SyntaxError: missing ) after argument list
+//USING THE ABOVE METHOD WILL NOT WORK. However, we have another way of accessing data within our objects.
+//WE use array brackets followed by the key inside the brackets. 
+console.log(numbers[100]) //one hundred
+//This works because [100] is also converted to a string and is used to see if there is a matching string within the object which it does. 
+//the reason we would use square bracket notation is that we have property names that aren't valid Java Script identifiers. 
+//Identifiers in javascript are the name of a vairable. For example,
+//let my cat = "mish"
+//this is not a valid identifier in javascript. It would be a syntax error.
+//let 76copeland = "address" 
+//this would also be invalid because we can't start a variable with a number. 
+//However, that doesn't mean that we can use that as a key in an object! 
+//we could then use square bracket notation in this way to accesss it, 
+//numbers["76copeland"] //address
+//we would use bracket notation when it is not synatically valid to use dot notation. 
+
+//another reason to use square brackets is when we want to use a dynamic value, like a variable to access information from an object, for example.
+const palette = {
+    red: "#eb4d4b",
+    yellow: "#f9ca24",
+    blue: "#30336b"
+}
+console.log(palette.blue); //#30336b
+console.log(palette["blue"]); //#30336b
+//let says this is comming from some user input. 
+//it comes from a website where a user is choosing some colour.
+let mysteryColor = "yellow"; 
+console.log(palette[mysteryColor]); //#f9ca24
+//this method would not work with dot notation.
+//this is because the square brackets looks for the value of mystery colour (yellow), and then plug that into palette. 
+//square brackets are useful when we have dynamic information that we are trying to access!  
+
 
 /*
 ADDING AND UPDATING PROPERTIES 
