@@ -44,3 +44,57 @@ colours[1] //orange
 colours[2] //yellow
 colours[3] //green
 colours[colours.length-1] //green
+
+/*
+MODIFYING ARRAYS 
+
+We can use the same syntax, where we use the index and square brackets 
+but we can assign a newvalue, that will change whatever is at that index
+Unlike strings, arrays are mutable. 
+
+
+*/
+
+let stuffForShops = [ "cheese", "milk"]  //array = cheese, milk
+stuffForShops[1] = "Whole Milk"; //array = cheese, Whole Milk 
+stuffForShops[2] = "Ice Cream"; //array = cheese, Whole Milk, Ice cream
+
+//The problem with this approach is when we don't know how many items are in the array. s
+//say data is coming in dynamically from users or a database, we might not know how many items are in the array. 
+
+//We can always add to the end of the array the following way. 
+
+stuffForShops[stuffForShops.length] = "Tomatoes"; //array = cheese, milk, ice cream, tomatoes. 
+console.log(stuffForShops);
+
+/*
+ARRAY METHODS 
+
+Push = add to end of array 
+Pop = remove from end of array 
+Shift = remove from start of array 
+Unshift = add to start  of array 
+
+*/
+
+let topSongs = [
+    "first time ever i saw you face",
+    "god only knows",
+    "a day in the life",
+    "life on mars"
+];
+
+topSongs.push["Fortunate Son"] //array = "first time ever i saw you face", "god only knows", "a day in the life", "life on mars", "fourtunate son"
+//when we use the push method with the array we are actually chamging the data in the array, this is different from strnigs, 
+//in which we would have to save the additional data in a new variable. 
+
+topSongs.pop() //array = "first time ever i saw you face", "god only knows", "a day in the life", "life on mars"
+//.pop removes the last item and returns to us the value that we have removed. 
+//we can also use .pop to get the value of something out of an array and store in a variable, for example, 
+const nextSong = topSongs.pop(); 
+console.log(nextSong);//"a day in the life"
+console.log(topSongs);//[ 'first time ever i saw you face', 'god only knows' ]
+
+
+
+
