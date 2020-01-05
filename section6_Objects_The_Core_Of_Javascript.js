@@ -124,11 +124,28 @@ console.log(palette[mysteryColor]); //#f9ca24
 //this is because the square brackets looks for the value of mystery colour (yellow), and then plug that into palette. 
 //square brackets are useful when we have dynamic information that we are trying to access!  
 
-
 /*
 ADDING AND UPDATING PROPERTIES 
 
+We can do this using either dot notation or square brackets. 
+The only difference is that we use the equals sign to assign a value, eiher to update that value or give it an inital value.
+
 */
+const userReviews = {};
+
+userReviews["queenBee49"] = 4.0; 
+userReviews.mrSmith79 = 3.5; 
+console.log(userReviews); //{ queenBee49: 4, mrSmith79: 3.5 }
+//To add a property, we access a property that doesn't exist, and pass to it a value. 
+//to update something we do exactly the same thing.
+userReviews["Colt"] = 5; 
+userReviews.Bruce = 1; 
+console.log(userReviews);//{ queenBee49: 4, mrSmith79: 3.5, Colt: 5, Bruce: 1 }
+//we also have access to operations we have seen before. For example += 
+userReviews["queenBee49"] += 2; //queenBee49: 6
+userReviews.mrSmith79++;  //mrSmith79: 4.5
+console.log(userReviews)
+
 
 /*
 NESTED ARRAYS AND OBJECTS 
