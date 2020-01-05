@@ -215,10 +215,42 @@ const game = {
 /*
 OBJECTS AND REFERENCE TYPES 
 
+An object works exactly the same way as an array. 
+Objects are reference types. An address is stored to the actual object we are using. 
+So if we make to objects equal to each other. IF we change one the other will change as well. 
+This is because they reference the same place in memory. 
+Because of this, people will often use const. 
+We use const when we want the reference to stay the same but we want the ability to change the contents. 
 */
 
 /*
 ARRAY/OBJECT EQUALITY
 
+Another important aspect around arrays and objects is the idea of equality and checking for equality. 
+We have seen the equality operators == and strict equality ===
+
 */
+
+let nums = [1,2,3];
+let mysteries = [1,2,3];
+console.log(nums === mysteries); //false! 
+//This is because of reference types. Nums and mysteries are stored with a different reference than each othher.
+//therefore they are not equal to each other. 
+
+//QUIZ HOW COULD I MAKE TWO ARRAYS WITH THE SAME VALUE EQUAL EACH OTHER? 
+//MY ANSWER SAVE THEM BOTH TO VARIABLES AND COMPARE THE VARIABLES. 
+let moreNums = nums; 
+
+
+const user = {
+    username: "Cherry",
+    email: "Cherry@hotmail.com",
+    notifications: ["message", "alert"]
+};
+
+if (!user.notifications.length) {
+    console.log("No New Notifications!") //No New Notifications!
+}
+
+//we cannot easily find equalities in arrays and objects because of reference without the use of loops! 
 
