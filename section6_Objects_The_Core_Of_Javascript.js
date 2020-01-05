@@ -150,7 +150,67 @@ console.log(userReviews)
 /*
 NESTED ARRAYS AND OBJECTS 
 
+Just like with array, where we could nest arrays within arrays, we can do the same thing with objects. 
+We can fill objects with keys that are arrays or even other objects. 
+And we do this all the time. 
+
 */
+const student = {
+    //string
+    firstName: "David",
+    //string
+    lastName: "Jones",
+    //array
+    strengths: ["Music", "Art"],
+    //object
+    exams: {
+        midterm: 92,
+        final: 88
+    }
+};
+//QUIZ QUESTION
+//HOW WOULD WE GET THE AVERAGE SCORE OF THE STUDENT? 
+//MY SOLUTION.
+let averageScore = student.exams.midterm + student.exams.final
+let answer = averageScore /2 
+console.log(answer); //90
+//BETTER SOLUTION 
+const avg = (student.exams.midterm + student.exams.final) /2 //90
+//This is a better solution because it simplifies our code by using brackets to control the order of operations! 
+//if we want to access ART we would do the follow. 
+console.log(student.strengths[1]) //ART
+
+//another very common format is when we have an array, and each element within the array is an object.
+//There is an order, and this is a pattern we will see very often.
+const shoppingCart = [
+    {
+        product: "Jenga Classic",
+        price: 6.66,
+        quantity: 1
+    },
+    {
+        product: "Echo Dot",
+        price: 29.99,
+        quantity: 3
+    },
+    {
+        product: "Fire Stick",
+        price: 39.99,
+        quantity: 2
+    }
+];
+
+const game = {
+    player1: {
+        username: "Blue",
+        playingAs: "X"
+    },
+    player2: {
+        username: "Muffins",
+        playAs: "O"
+    },
+    board: [ [ "O", null, "X"], ["X", "O", "X"], [null, "O", "X"]]
+    };
 
 /*
 OBJECTS AND REFERENCE TYPES 
