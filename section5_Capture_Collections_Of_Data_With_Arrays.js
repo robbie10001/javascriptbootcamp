@@ -287,7 +287,73 @@ it holds a reference to where the array is in memory.
  //both nums and otherNums where update just by changing the value of nums. This is called mutation.
  //This is very important for when we are working with arrays and objects! 
  
+/*
+USING CONST WITH ARRAYS 
 
+We often see people using Const when they define arrays. 
 
+*/
 
+const city = "Lisbon"; 
+//const city = "London"; //this will error because we are unable the change the value of something defined with CONST. 
+//Is we known, arrays are reference types. the array data is not the content that is stored in memory.
+//Instead, its a reference. So as long as the reference doesn't change, the interal elements of the array can. 
+//This is true even if we are using const. For example, 
+
+const myEggs = ["brown", "brown"]  //["brown, brown"]
+myEggs.push("purple");
+console.log(myEggs) //[ 'brown', 'brown', 'purple' ]
+//in the above example, only myEggs needs to remain constant. The data inside it is a reference, so can be changed. 
+//we can manipulate all the data within the array as long as we don't reassign our array to another array (because of the const, we can't change the reference)
+
+const foodStuff = ["milk"];
+foodStuff.push("choc")
+console.log(foodStuff) //[ 'milk', 'choc' ]
+//we can do this because we still have the same reference or arrow.
+//however we cannot make a new empty array out of foodStuff. 
+
+//because of this behaviour, const is used all the time when we are working with arrays. 
+//far more often than let. The majority of array variables are done with const.
+
+/*
+WORKING WITH NESTED ARRAYS 
+
+We can nest (or store) arrays within arrays. 
+
+*/
+const arrayArray = [
+    ["red", "crimson"],
+    ["blue", "navy blue"],
+    ["yellow", "golden rod"],
+    ["green", "olive"],
+    ["purple", "orchid"]
+]
+
+const animalPairs = [
+    ["doe", "buck"],
+    ["ewe", "ram"],
+    ["peahen", "peacock"]
+];
+
+console.log(animalPairs[2][0]) ;//peahen
+console.log(animalPairs[2][1]); //peacock
+console.log(animalPairs[1][1]); //ram
+console.log(animalPairs[1]);//[ 'ewe', 'ram' ]
+//We can update our arrays. 
+console.log(animalPairs[0][1]) //buck
+animalPairs[0][1] = "stag"
+console.log(animalPairs[0][1]) //stag
+
+//an array is normally the best choice when we want to preserve an important order. 
+//here is a much better example of a nested array. 
+
+const board = [
+    ["O", null, "X"],
+    [null, "X", "O"],
+    ["X", "O", null]
+]
+
+//We can use nested arrays to model any type of board. 
+//The above example is "O" amd "X"'s. 
+//MULTIDEMENTIONAL ARRAYS, are really common when we are working with boards. 
 
