@@ -118,3 +118,58 @@ dishesToDo.shift() //dishesToDo = []
 console.log(dishesToDo)
 
 
+/*
+MORE ARRAY METHODS! 
+
+concat - use to merges two or more arrays. 
+
+join - creates a string from an array 
+reverse - reverse an array 
+slice - copies a porition of an array 
+splice - remove/replaces elements within an array 
+sort - sorts an array. 
+
+*/ 
+
+let fruits = ["apple", "banana"];
+let veggies = ["asparagus", "brussel sprouts"];
+let meats = ["steak", "chicken breast"]
+
+fruits.concat(veggies); //[ 'apple', 'banana', 'asparagus', 'brussel sprouts' ]
+veggies.concat(fruits); // [ 'asparagus', 'brussel sprouts', 'apple', 'banana' ]
+
+//however, this does not actually save the changes we have made. 
+//To do this, we do the following. 
+
+let allFood = fruits.concat(veggies, meats); // [apple, banana, asparagus, brussel sprouts, steak, chicken breast]
+
+/*
+includes - looks for a value, and returns a boolean value. 
+indexOf - just like str.indexOf. It will search for a value, and if it finds it will return the index of that value. 
+If it doesn't find the value it will return [-1]
+
+These methods are similiar in that they look for values or search through an array.
+Although, they return different values. 
+
+*/
+//includes looks for a direct match.
+let ingredients = ["water", "flour", "cheese", "shrimp"]
+console.log(ingredients.includes("fish")); //false
+console.log(ingredients.includes("water")) //true 
+
+if(ingredients.includes("flour")) {
+    console.log("i can't eat that!") // i can't eat that!"
+}
+
+let foods = ["water", "flour", "cheese", "shrimp"]; 
+console.log(foods.indexOf("cheese")); //2 
+console.log(foods.indexOf("bread")); //-1 
+//just like with include, we can specify a from index. 
+console.log(foods.indexOf("shrimp", 2)); //3 
+console.log(foods.indexOf("water", 2)); //-1
+
+
+
+
+
+
