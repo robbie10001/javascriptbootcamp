@@ -49,8 +49,22 @@ for(let i = 200; i>= 0; i-=25) {
 /*
 INFINITE LOOPS 
 
+Infinite loops are something that we want to avoid. 
+In general we need to make sure that we are going in the right direction with our loop. For example,
+for(let i 100; i >= 0; i--) {
+    console.log(i)
+}
+
 
 */
+
+//this would be an infinite loops, because i will always be bigger than zero. 
+/*
+for (let i = 20; i >= 0; i+=2) {
+    console.log(i);
+}
+*/
+
 
 /*
 FOR LOOPS AND ARRAYS 
