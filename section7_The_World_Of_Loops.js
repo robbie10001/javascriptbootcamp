@@ -54,10 +54,7 @@ In general we need to make sure that we are going in the right direction with ou
 for(let i 100; i >= 0; i--) {
     console.log(i)
 }
-
-
 */
-
 //this would be an infinite loops, because i will always be bigger than zero. 
 /*
 for (let i = 20; i >= 0; i+=2) {
@@ -65,12 +62,83 @@ for (let i = 20; i >= 0; i+=2) {
 }
 */
 
-
 /*
 FOR LOOPS AND ARRAYS 
 
-
+We can use for loops to iterate of an array or a string.
+To loop over an array, start at 0 index and continue to the last index (length -1)
+  
 */
+const animals = [ "lions", "tigers", "bears"];
+for (let i = 0; i < animals.length; i ++) {
+    console.log(i, animals[i]); //0 "lions" 1 "tigers" 2 "bears"
+}
+
+const examScores = [98, 77, 84, 91, 57, 66]; 
+for (let i = 0; i < examScores.length; i ++) {
+    console.log(examScores[i]) //98, 77, 84, 91, 57, 66 
+}
+
+const myStudents = [
+    {
+        firstName: "Zeus",
+        grade: 86
+    },
+    {
+        firstName: "Artemis",
+        grade: 97
+    },
+    {
+        firstName: "Hera",
+        grade: 72
+    },
+    {
+        firstName: "Appolo",
+        grade: 90
+    }
+];
+
+for(let i = 0; i < myStudents.length; i ++) {
+    let student = myStudents[i]; 
+    console.log(`${student.firstName} scored ${student.grade}`); //Zeus scored 86, Artemis scored 97, Hera scored 72, Appolo scored 90
+};   
+const word = "stressed";
+for(let i = word.length - 1; i >= 0; i --) {
+    console.log(word[i]); //desserts
+};
+
+const greekGods = [
+    {
+        firstName: "Zeus",
+        grade: 86
+    },
+    {
+        firstName: "Artemis",
+        grade: 97
+    },
+    {
+        firstName: "Hera",
+        grade: 72
+    },
+    {
+        firstName: "Appolo",
+        grade: 90
+    }
+];
+
+let total = 0;
+
+for(let i = 0; i < greekGods.length; i++ ) {
+    let allStudent = greekGods[i];
+    total += allStudent.grade;
+}
+console.log(total/myStudents.length); //86.25 
+
+
+
+
+
+
 
 /*
 NESTED FOR LOOPS 
@@ -118,5 +186,3 @@ FOR...IN LOOPS
 
 
 */
-
-
