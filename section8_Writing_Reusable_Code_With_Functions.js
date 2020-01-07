@@ -186,21 +186,52 @@ console.log(summer)//4
 //we can only return one thing from a function.
 //we can only return one value. To get multiple values we can use strings and arrays to collect the values we want to return
 
-
-
 /*
 
 MORE ON RETURN VALUES 
-
-
+The return statement ends function execution and specifies the value to be returned by that function. 
+If we have a return statement in the middle of our function, the code afterwards, is not going to execute.
 
 */
+//in this example we can have multipole return arguments because only one of them will ever be executed!
+console.log("-------break---------")
+function isPurple(color) {
+    if(color.toLowerCase() === "purple") {
+        return true;
+    }
+    //if it's not true its false! Therefore we don't need an else. 
+        return false; 
+    }
+
+console.log(isPurple("purple"));//true
+console.log(isPurple("green"));//false
+
+//if we are just returning a boolean value, we can do this in an even more simple way. 
+
+function isPurple(color) {
+    return color.toLowerCase() === "purple"
+    //if it's not equal to purple then it has to be false. 
+}
+
+
 
 
 
 /*
 FUNCTION CHALLENGE 1: PASSWORDVALIDATOR
 
+// Write a isValidPassword function
+// It accepts 2 arguments: password and username
+// Password must:
+//	- be at least 8 characters
+//  - cannot contain spaces
+//  - cannot contain the username
+// If all requirements are met, return true.
+//Otherwise: false
+
+// isValidPassword('89Fjj1nms', 'dogLuvr');  //true
+// isValidPassword('dogLuvr123!', 'dogLuvr') //false
+// isValidPassword('hello1', 'dogLuvr') //false
 
 
 */
@@ -209,6 +240,9 @@ FUNCTION CHALLENGE 1: PASSWORDVALIDATOR
 
 /*
 FUNCTION CHALLENGE2: AVERAGE
+// Write a function to find the average value in an array of numbers
+//avg([0,50]) //25
+//avg([75,76,80,95,100]) //85.2
 
 
 
@@ -219,7 +253,13 @@ FUNCTION CHALLENGE2: AVERAGE
 /*
 FUNCTION CHALLENGE 3: PANGRAMS
 
+// A pangram is a sentence that contains every letter of the alphabet, like:
+//"The quick brown fox jumps over the lazy dog"
 
+// Write a function called isPangram, which checks to see if a given sentence contains every letter of the alphabet.  Make sure you igore string casing!
+
+// isPangram('The five boxing wizards jump quickly') //true
+// isPangram('The five boxing wizards jump quick') //false
 
 */
 
@@ -227,6 +267,16 @@ FUNCTION CHALLENGE 3: PANGRAMS
 
 /*
 FUNCTION CHALLENGE 4: GET PLAYING CARDS
+// Write a getCard() function which returns a random playing card object, like:
+// 		{
+// 			value: 'K'
+// 			suit: 'clubs'
+// 		}
+//Pick a random value from:
+//----1,2,3,4,5,6,7,8,9,10,J,Q,K,A
+//Pick a random suit from:
+//----clubs,spades, hearts, diamonds
+//Return both in an object
 
 
 
