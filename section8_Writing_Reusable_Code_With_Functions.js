@@ -60,6 +60,25 @@ DICE ROLL FUNCTION
 
 
 */
+function rollDie() {
+    let roll = Math.floor(Math.random() * 6) + 1;
+    console.log(`Rolled ${roll}`);
+};
+
+rollDie();//Rolled 1
+
+function throwedDice(){
+    console.log(rollDie());
+    console.log(rollDie());
+    console.log(rollDie());
+    console.log(rollDie());
+    console.log(rollDie());
+    console.log(rollDie());
+}
+
+throwedDice(); //rolled 3, rolled 5, rolled 6, rolled 1, rolled 4, rolled 1
+
+
 
 
 
