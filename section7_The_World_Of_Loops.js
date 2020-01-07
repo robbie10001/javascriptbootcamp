@@ -210,7 +210,7 @@ while(guess !== target) {
 //we then print out the number and the target when target and guess are the same number.
 console.log(`Target: ${target} Guess: ${guess}`) //Target 9 Guess 9
 
-console.log("----------break---------")
+console.log("----------breaker---------")
 //while(Some condition)
 //in the loop, update or attempt to make that condition false. 
 
@@ -224,23 +224,46 @@ If we have nested loops, the break keyword will only stop the loop within its sc
 The use of the while true, method as outlined below is not very explinational. 
 
 */
-//loop forever
-const target = Math.floor(Math.random() * 10);
+//loop forevers
+/*
+const targets = Math.floor(Math.random() * 10);
     console.log(target);//a random number from 1 to 10
-let guess = Math.floor(Math.random() * 10);
+let guesses = Math.floor(Math.random() * 10);
 while(true){
-    if(target === guess) break;
+    if(targets === guesses) break;
 //OUT CONDITION WHICH IS IF TARGET AND GUESS ARE THE SAME WE BREAK, IS HOW WE CONTROL THE FLOW OF THIS LOOP.
     guess = Math.floor(Math.random() * 10);
 }
-console.log(`Target: ${target} Guess: ${guess}`)
+console.log(`Target: ${targets} Guess: ${guesses}`)
 console.log("YOU WIN YOUNG FELLA!");
+*/
 
 /*
 FOR..OF INTRO
 
+A nice and easy way of iterating over arrays. 
+
+//iterable could be an array or string or other datatypes
+for(variable of iterable) {
+    statement
+}
 
 */
+
+console.log("-----------break--------")
+let subreddits = ["soccer", "popheads", "cringe", "books"];
+//let = the variable name we are gong to use
+//sub of = the length esentially of the subreddits arrays 
+//subreddits= the array we want to iterate over. 
+for(let sub of subreddits) {
+    console.log(sub);//soccer, popheads, cringe, books
+}
+
+for(let char of "chockadoodldoo") {
+    console.log(char.toUpperCase()); //CBOCKADOODLDOO
+}
+
+
 
 /*
 COMPARING FOR AND FOR...OF 
