@@ -148,13 +148,48 @@ divide(10, 3) //3.3333
 /*
 THE RETURN STATEMENT
 
+the build in method of javascript return values when we call them. We can then store those values. 
+So far, our functions are not returning a value. They are printing a value out! 
+
+if we look at any build in method, for example 
+
+"hello".toUpperCase();
+
+the console prints out hello, and we see the text hello, but that's only in the console. 
+If we run this code in Visual Code Studio, we see nothing, nothing is returned to us.
+We are not printing it nor are we saving it to a variable. for example,
+
+const scream = "hello".toUpperCase();
+toUpperCase returned a value which we then save to our variable "scream"
+return values are very useful, we can capture them in a variable, we could pass them to another function.
+Most of the time we really dom't print much to the console! 
+Unless we are testing something out. 
+
+Most of the time when we are writing function is returning values and using those values somehow. 
 
 
 */
+console.log("---------break----------");
+
+function add(x, y) {
+    console.log(x + y);
+}
+const sums = add(1,2)
+console.log(sums)//undefined 
+
+function add(x, y) {
+    return x + y; //THIS RETURNS A VALUE WE CAN USE!
+}
+const summer = add(2, 2)//4
+console.log(summer)//4
+
+//we can only return one thing from a function.
+//we can only return one value. To get multiple values we can use strings and arrays to collect the values we want to return
 
 
 
 /*
+
 MORE ON RETURN VALUES 
 
 
