@@ -356,5 +356,25 @@ console.log(average);//8.75
 /*
 FOR...IN LOOPS 
 
+We can loop over the keys of an object, using Object.keys()
+//for (variable in object) {
+    statement 
+}
 
+A for of loop will iterate over the actual values of an array. 
+A for in will loop over the keys (properties) in an object. 
+Technically we can use for in with arrays, although there is not often a good idea for us to do this. 
 */
+
+const jeopardyWinnings = {
+    regularPlay: 2522700,
+    watsonChallenge: 300000,
+    tournamentOfChampions: 500000,
+    battleOfTheDecades: 100000
+};
+
+for(let prop in jeopardyWinnings) {
+//this returns the four keys within our object.
+    console.log(prop);//regularPlay, watsonChallenge, tournamentOfChampions, battleOfTheDecade 
+    console.log(jeopardyWinnings[prop]);//2522700, 300000, 500000, 100000
+};
