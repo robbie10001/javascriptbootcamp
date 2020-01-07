@@ -56,9 +56,6 @@ for (let i = 0; i >3; i++) {
 }
 /*
 DICE ROLL FUNCTION
-
-
-
 */
 function rollDie() {
     let roll = Math.floor(Math.random() * 6) + 1;
@@ -78,16 +75,40 @@ function throwedDice(){
 
 throwedDice(); //rolled 3, rolled 5, rolled 6, rolled 1, rolled 4, rolled 1
 
-
-
-
-
 /*
 INTRODUCING ARGUMENTS
 
+Arguments is just a fancy term for inputs into a function.
+So far, our simple functions haven't accepted any inputs. 
+They behave the same way every time. 
 
+We can write functions that accept inputs, or in other words, accept functions! 
+We can put through as many arguments as we want into functions. 
+An example of an argument we have already used. 
+
+"hello".indexOf("h"); //returns 0 for the index of the argument "h"
+"hello".indexOf("0"); //returns 4 for the index of the argument "o"
 
 */
+
+//in the below function, the argument of person will do nothing along. 
+//it will only work if we pass a value (datatype) when we call greet. 
+function greet(person){
+    console.log(`Hey ${person}`);
+    //our input has a direct impact on what our function does. 
+}
+greet("bruce"); //Hey bruce
+greet("Harry"); //Hey Harry
+//if we don't pass anything in, we don't break the code, we just get undefined! 
+
+function throwThemDice(numRolls) {
+    for(let i = 0; i < numRolls; i++) {
+        rollDie();
+    }
+
+}
+
+throwThemDice(5)//Rolled 1, Rolled 4, Rolled 2, Rolled 2, Rolled 3 
 
 
 
