@@ -300,19 +300,58 @@ for(let row of magicSquare){
 
 const words1 = ["mail", "milk", "bath", "black"];
 const words2 = ["box", "shake", "tub", "berry"]; 
-
+//for every element as long as it is not longer than the length of words1 loop over.. 
 for(let i = 0; i <words1.length; i++) {
     console.log(`${words1[i]}${words2[i]}`) //mailbox, milkshake, bathtub, blackberry
-};
+};//print out all the elements with words1 and words2 in each iteration. 
 
 //This would not have been easy to achieve using a a for of loop! 
-
-
 
 /*
 FOR...OF WITH OBJECTS 
 
+
 */
+//An object is not iterable. 
+//To iterate over an object, we can use a for of loop, and iterate over just the keys and values. 
+//we can do these using the method Object.keys in which we pass in an object and returns a list of the keys.
+//we also have Object.values which returns the value of the object. 
+//If we want both the object and the keys, we can use the keys to access the values in our loops. 
+
+
+//There are no indecies for these objects, so we can't use a for loop.
+//our first option is to use objects.keys(movieReviews) which we can loop over for the values. 
+//our second option is object.values(movieReviews)
+//
+const moviesReview = {
+    Arrival: 9.5,
+    Alien: 9, 
+    "In Burges": 9, 
+    Coraline: 7.5 
+}
+//for each movie with an object key in movieReview
+for (let movie of Object.keys(moviesReview)) {
+    console.log(movie); //Arrival, Alien, In Burges, Coraline 
+//print a list of the movies within moviesReview
+}
+//for each movie winth an object key in movieReview
+for (let movie of Object.keys(moviesReview)) {
+//print a list of each movies(movie) and each value for each movie (rating)
+    console.log(movie, moviesReview[movie]); //Arrival 9.5, Alien 9, In Burges 9, Coraline 7.5,
+}
+//define a variable which is equal to the rating of a movie within moviewReview
+const rating = Object.values(moviesReview)
+//create a variable called totals and set its value to 0
+let totals = 0; 
+//for every element in rating loop through
+for(let r of rating){
+//every iteration add the sum of the movie rating to totals. 
+    totals += r;
+}
+//create a variable that is equal to the sum of totals divided by the amount of times we iterated through the ratings variable. 
+let average = totals /= rating.length
+console.log(average);//8.75
+//print out the average of all movie ratings. 
 
 /*
 FOR...IN LOOPS 
