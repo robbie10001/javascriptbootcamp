@@ -262,14 +262,52 @@ for(let sub of subreddits) {
 for(let char of "chockadoodldoo") {
     console.log(char.toUpperCase()); //CBOCKADOODLDOO
 }
-
-
-
 /*
 COMPARING FOR AND FOR...OF 
 
+for (variable of iterable) {
+    statement
+}
 
 */
+const magicSquare = [
+    [2, 7, 6],
+    [9, 5, 1],
+    [4, 3, 8]
+];
+
+//THE TWO LOOPS ACHIEVE THE SAME GOAL
+
+/*
+for(let i = 0; i < magicSquare.length; i ++) {
+    let row = magicSquare[i];
+    let sum = 0;
+    for(let j = 0; j < row.length; j ++) {
+        console.log(row[j]);
+        sum += row[j];
+    }
+    console.log(`${row} sumed to ${sum}`) //2,7,6 summed to 15, 9,5,1 summed to 15, 4,3,8 sumed to 15
+}
+*/
+
+for(let row of magicSquare){
+    let sum = 0;
+    for(let num of row){
+        sum+=num; 
+        console.log(`${row} sumed to ${sum}`) 
+    }
+}
+
+const words1 = ["mail", "milk", "bath", "black"];
+const words2 = ["box", "shake", "tub", "berry"]; 
+
+for(let i = 0; i <words1.length; i++) {
+    console.log(`${words1[i]}${words2[i]}`) //mailbox, milkshake, bathtub, blackberry
+};
+
+//This would not have been easy to achieve using a a for of loop! 
+
+
 
 /*
 FOR...OF WITH OBJECTS 
