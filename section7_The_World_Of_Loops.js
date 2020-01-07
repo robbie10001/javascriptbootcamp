@@ -184,17 +184,34 @@ while(SOME CONDITION IS TRUE) {
 
 */
 let j = 0;
+//this is not the best example of a while loop as it's not good practice to declare the value of a variable outside the loop. 
 while(j <= 5){
     console.log(j); //0, 1, 2, 3, 4, 5
-    j++;
+    j++; 
 }
-
-
 /*
 MORE WHILE LOOPS 
+Where a while loop is really usefully, is when we don't know how many times we want the loop to run. 
 
 
 */
+console.log("--------break--------")
+
+const target = Math.floor(Math.random() * 10);
+    console.log(target);//a random number from 1 to 10
+let guess = Math.floor(Math.random() * 10);// a random number from 1 to 10 
+//while guess is not equal to target
+while(guess !== target) {
+//we print the guess 
+    console.log(guess); //9,3,6,1,5,6
+//we then get another random number between 1 and 10
+    guess = Math.floor(Math.random() * 10);
+}
+//we then print out the number and the target when target and guess are the same number.
+console.log(`Target: ${target} Guess: ${guess}`) //Target 9 Guess 9
+
+//while(Some condition)
+//in the loop, update or attempt to make that condition false. 
 
 /*
 BREAK KEYWORD
