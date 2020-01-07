@@ -210,14 +210,31 @@ while(guess !== target) {
 //we then print out the number and the target when target and guess are the same number.
 console.log(`Target: ${target} Guess: ${guess}`) //Target 9 Guess 9
 
+console.log("----------break---------")
 //while(Some condition)
 //in the loop, update or attempt to make that condition false. 
 
 /*
 BREAK KEYWORD
 
+We can use the break keyword to finish or end our loops. 
+Breaks are uncommon in for loops, this is because we directly control our many times the loop runs.
+If we have nested loops, the break keyword will only stop the loop within its scope.  
+
+The use of the while true, method as outlined below is not very explinational. 
 
 */
+//loop forever
+const target = Math.floor(Math.random() * 10);
+    console.log(target);//a random number from 1 to 10
+let guess = Math.floor(Math.random() * 10);
+while(true){
+    if(target === guess) break;
+//OUT CONDITION WHICH IS IF TARGET AND GUESS ARE THE SAME WE BREAK, IS HOW WE CONTROL THE FLOW OF THIS LOOP.
+    guess = Math.floor(Math.random() * 10);
+}
+console.log(`Target: ${target} Guess: ${guess}`)
+console.log("YOU WIN YOUNG FELLA!");
 
 /*
 FOR..OF INTRO
