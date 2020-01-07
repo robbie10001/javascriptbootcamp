@@ -134,23 +134,61 @@ for(let i = 0; i < greekGods.length; i++ ) {
 }
 console.log(total/myStudents.length); //86.25 
 
-
-
-
-
-
-
 /*
-NESTED FOR LOOPS 
+NESTED LOOPS 
+
+Just like with conditional statements (such as if)  with can nest loops. 
 
 
 */
+
+
+    for(let i = 1; i <= 10; i++) {
+        console.log("Outer Loop:", i); //Outer Loop: 1, Outer Loop: 2, Outer Loop: 3, Outer Loop: 4, Outer Loop: 5, Outer Loop: 6, Outer Loop: 7, Outer Loop: 8, Outer Loop: 9, Outer Loop: 10
+    //we can add an inner loop which we can define i in again. This is because they have a different scope.
+    //although, it is better practice to use a different variable name. 
+        for(let x = 10; x >= 0; x-=2) {
+            console.log("Inner Loop:", x) // Inner Loop: 10 Inner Loop: 8 Inner Loop: 6 Inner Loop: 4 Inner Loop: 2 Inner Loop: 0 Outer Loop: 9 Inner Loop: 10 Inner Loop: 8 Inner Loop: 6 Inner Loop: 4 Inner Loop: 2 Inner Loop: 0 Outer Loop: 10
+    //What is happening is that everytime we run the outer loop, the inner loop runs its full cycle. 
+    //this is not a great example of why we would use nested loops.
+    }
+}
+
+const gameBoard = [
+[4, 32, 8, 4],
+[64, 8, 32, 2],
+[8, 32, 16, 4],
+[2, 8, 4, 2 ]
+];
+
+for (let i = 0; i < gameBoard.length; i ++) {
+    let row = gameBoard[i]; 
+    for (let j = 0; j < row.length; j ++) {
+        console.log(row[j]); //4, 32, 8, 4, 64, 8, 32, 2, 8, 32, 16, 4, 2, 8, 4, 2 
+          
+    }
+        //Our outerloop start, then we return 4,32,8,4 in the inner loop. We then continue through the rows. 
+    }
 
 /*
 INTRO TO WHILE LOOPS 
 
+A while loop continues to run as long as its test condition is true. 
+A while loop is more flexible than a for loop in some ways. 
+
+
+
+while(SOME CONDITION IS TRUE) {
+    RUN THIS CODE 
+}
 
 */
+let j = 0;
+while(j <= 5){
+    console.log(j); //0, 1, 2, 3, 4, 5
+    j++;
+}
+
 
 /*
 MORE WHILE LOOPS 
