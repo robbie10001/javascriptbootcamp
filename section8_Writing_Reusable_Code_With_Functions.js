@@ -110,8 +110,6 @@ function throwThemDice(numRolls) {
 
 throwThemDice(5)//Rolled 1, Rolled 4, Rolled 2, Rolled 2, Rolled 3 
 
-
-
 /*
 FUNCTIONS WITH MULTIPLE ARGUMENTS
 
@@ -119,8 +117,34 @@ FUNCTIONS WITH MULTIPLE ARGUMENTS
 
 */
 
+//the num that we have in our function definition is a paramater. 
+//A paramater is a placeholder name. It's the variable that we define when we write our function.
+//When we call our function we pass in a value this is the argument
 
+              //num=paramater
+function square(num) {
+    console.log(num * num);
+}
+square(4)//16
+     //4= argument
 
+function sum(x, y){
+    console.log(x + y);
+}
+sum(3, 4) //7
+sum(2, 5) //7
+//the order we define our paramaters in, dictates how it is filled in from left to right
+//(1 first, 4 second)
+//(10 first, 3 second)
+function divide(a,b){
+    console.log(a/b);
+}
+
+divide(1, 4) //0.25
+divide(10, 3) //3.3333
+//divide(5)//Nan
+//The function doesn't care about what datatype we put in. It will just do what we tell it to!
+//if we are missing an argument, we will return undefined! 
 /*
 THE RETURN STATEMENT
 
