@@ -282,9 +282,6 @@ function average(arr) {
 
 average([24, 100, 54, 75]);
 
-
-
-
 /*
 FUNCTION CHALLENGE 3: PANGRAMS
 
@@ -295,10 +292,20 @@ FUNCTION CHALLENGE 3: PANGRAMS
 
 // isPangram('The five boxing wizards jump quickly') //true
 // isPangram('The five boxing wizards jump quick') //false
-
 */
+console.log("----------break-------")
 
+function isPangram(sentence) {
+    let lowerCased = sentence.toLowerCase();
+    for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+        if(!lowerCased.includes(char)) {
+            return false;
+        }
+    }
+        return true; 
+}
 
+isPangram('The five boxing wizards jump quick') //false
 
 /*
 FUNCTION CHALLENGE 4: GET PLAYING CARDS
@@ -312,6 +319,32 @@ FUNCTION CHALLENGE 4: GET PLAYING CARDS
 //Pick a random suit from:
 //----clubs,spades, hearts, diamonds
 //Return both in an object
-
-
 */
+function pick(arr) {
+    const idx = Math.floor(Math.random() * arr.length);
+    return arr[idx];
+}
+
+function getCard() {
+    const values = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "J",
+        "Q",
+        "K",
+        "A"
+    ];
+const suits = ["clubs", "spades", "hearts", "diamonds"];
+   { value: pick(value), suit: pick(suit) } ; 
+};
+
+
+
