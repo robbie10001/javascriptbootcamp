@@ -137,24 +137,45 @@ function outer(){
     }
     outer()
 };
-//console.log(outer()); //undefined 
-//console.log(inner()); //inner is not defined. 
-
-
-
-
-
-
-
-
-
 
 /*
 FUNCTION EXPRESSIONS 
+There is another syntax we can use to define our functions. 
+This is called a function expression. 
+They work just as well as the functions we have been declaring already. 
+THERE IS ONE KEY DIFFERENCE, THE FUNCTION IS STORED IN A VARAIBLE. 
+THE FUNCTION ITSELF DOESN'T HAVE A NAME. 
+WE ARE ABLE TO STORE OUR FUNCTION IN A VARIABLE BECAUSE, FUNCTIONS ARE OBJECTS.     
+we can store them in a variable, we can store 10 of them in an array, we can even pass them around as arguments.
+We do this all the time. 
 
 
 
 */
+//we have a variable called square. 
+//it holds a function(an object) an it takes an argument.
+const square = function (num) {
+    return num * num 
+}
+//to call it, we use the variable name and an argument. 
+//just like any other function. 
+console.log(square(6)); //36
+console.log(square(7)); //49
+
+function add(x, y) {
+    return x + y;
+}
+//this is the same as 
+const sum = function (x,y) {
+    return x + y; 
+}
+console.log(sum(9,3))//12 
+console.dir(sum)//function: sum
+//we can add in a name for our function 
+const product = function multiple(x, y) {
+    return x * y 
+};
+console.log(product(3, 4));//12 
 
 
 /*
