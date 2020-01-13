@@ -1,3 +1,4 @@
+
 /*
 GOALS FOR THIS SECTION
 Write Valid Functions
@@ -235,7 +236,21 @@ FUNCTION CHALLENGE 1: PASSWORDVALIDATOR
 
 
 */
+function isValidPassword(password, username){
+    if (password.length >= 8 && !password.includes(username)) {
+        if(!password.includes(""))
+        return true
+    } else  {
+        return false 
 
+    }
+
+    }
+
+    
+
+
+console.log(isValidPassword("dogLuvr123!", "dogLuvr"));
 
 
 /*
@@ -277,7 +292,6 @@ FUNCTION CHALLENGE 4: GET PLAYING CARDS
 //Pick a random suit from:
 //----clubs,spades, hearts, diamonds
 //Return both in an object
-
 
 
 */
