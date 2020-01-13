@@ -236,19 +236,26 @@ FUNCTION CHALLENGE 1: PASSWORDVALIDATOR
 
 
 */
+/*
 function isValidPassword(password, username){
     if (password.length >= 8 && !password.includes(username)) {
         if(!password.includes(""))
         return true
     } else  {
         return false 
-
     }
+};
 
-    }
+console.log(isValidPassword("dogLuvr123!", "dogLuvr"));
 
-    
-
+*/
+console.log("--------break-------")
+function isValidPassword(password, username) {
+    const tooShort = password.length < 8;
+    const hasSpace = password.indexOf(" ") !== -1; 
+    const tooSimilar = password.indexOf(username) !== -1; 
+    return !tooShort && !hasSpace && !tooSimilar;  
+};
 
 console.log(isValidPassword("dogLuvr123!", "dogLuvr"));
 
@@ -259,9 +266,22 @@ FUNCTION CHALLENGE2: AVERAGE
 //avg([0,50]) //25
 //avg([75,76,80,95,100]) //85.2
 
-
-
 */
+
+function average(arr) {
+    let total = 0 
+    //loop over each paramater (arr)
+    for(let num of arr){
+    //add them together
+    total += num;
+    }
+    //divide by number of nums 
+    let res = total / arr.length; 
+    console.log(res) //this averages out to 63.25
+};
+
+average([24, 100, 54, 75]);
+
 
 
 
