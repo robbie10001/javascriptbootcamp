@@ -226,17 +226,70 @@ const thing = {
 console.log(thing.doSomething(50, 2))//100 
 //we then call the object with the paramaters 50, 2 which ends up being 50 x 2 = 100
 
-
-
-
-
 /*
 FUNCTIONS AS ARGUMENTS 
 
-
-
+Higher order functions are functions that operate on/with other functions.
+They can accept other functions as arguments. 
+They can return a function. 
 */
 
+//function that accept other function as argument. 
+
+//we create a function called callTwice. 
+//it accepts as an argument (func) which we are calling twice. 
+function callTwice(func) {
+    func();
+    func();
+}
+//we have another function laugh. 
+function laugh() {
+    console.log("HAHAHAHAHAHAAHAHAHAH");
+}
+//if we cann the function callTwine and laugh, we print out laugh twice. 
+console.log(callTwice(laugh));
+//HAHAHAHAHAHAAHAHAHAH
+//HAHAHAHAHAHAAHAHAHAH
+
+function callThreeTimes(f) {
+    f();
+    f();
+    f();
+}
+function cry(){
+    console.log("Boo Hoo I'm so sad!")
+}
+console.log("-------break--------")
+//we call our fuction with the argument of another function. 
+callThreeTimes(cry);
+//Boo Hoo I'm so sad!
+//Boo Hoo I'm so sad!
+//Boo Hoo I'm so sad!
+
+//we can pass in whatever paramater name we want. 
+//it will store whatever we pass in, javascript doesn't care! 
+function repeatNTimes(action, num){
+    for(let i = 0; i < num; i++){
+        action();
+    }
+}
+repeatNTimes(cry, 2);
+//Boo Hoo I'm so sad!
+//Boo Hoo I'm so sad!
+
+function pickOne(f1, f2){
+    let rand = Math.random();
+    console.log(rand);
+    if (rand < 0.5) {
+       console.log(f1()); 
+    } else {
+        console.log(f2()); 
+    }
+}
+pickOne(cry, laugh)
+//we pass in to our function another function. 
+//we then get a random number out of the function. 
+//based on this number, we either print out the cry or laugh function. 
 
 /*
 FUNCTIONS AS RETURN VALUES  
