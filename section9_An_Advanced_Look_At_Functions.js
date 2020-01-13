@@ -101,16 +101,53 @@ function doubleArr(arr){
 doubleArr([1,2,3]);
 //this returns 2,4,6 
 
-
-
-
-
 /*
 LEXICAL SCOPE  
 
-
+Lexical scope is pretty simple and straight forward.
+When we have nested functions, we have inner and outer functions. 
+a variable defined in one function is available to nested functions within it. 
 
 */
+function outer() {
+    //our outer function is a variable called hero. 
+    //we don't have access to it outside of the function, 
+    //but if have a nested function it still has access to it. 
+    //FOR EXAMPLE, OUTER FUNCTION HAS ACCESS TO INNER FUNCTION. 
+    //when we have nested functions we have access to the variables declared in the parent function. 
+    //IF WE USE REACT THIS IS VERY IMPORTANT! 
+    let hero = "black panther";
+
+    function inner() {
+        let cryForHelp = `${hero}, please save me!`
+        console.log(cryForHelp);
+    }
+    inner(); 
+};
+
+function outer(){
+    let films = "Amadeus";
+
+    function inner(){
+        let films = "The Shining"
+        console.log(films.toUpperCase());
+        //when we reference films, we are going to see if there is a films defined within the inner function.
+        //if it cannot find one, it moves up to the next function (outer) and looks to see if films is defined within the parent function. 
+        //if it is it will use the parent variable. 
+    }
+    outer()
+};
+//console.log(outer()); //undefined 
+//console.log(inner()); //inner is not defined. 
+
+
+
+
+
+
+
+
+
 
 /*
 FUNCTION EXPRESSIONS 
