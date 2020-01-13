@@ -401,7 +401,7 @@ heaps of the built in method expect a callback function.
 Often we use an anoynomus function when we are using callbacks
 
 */
-
+/*
 function grumpus() {
     alert("GAHHH GO AWAY!")
 }
@@ -419,19 +419,50 @@ setTimeout(function(){
 }, 5000); 
 //this annyonmous function is good when we don't want to use a function again. 
 //It will send an alert in 5 seconds like the first example. 
-
-
-
-
-
-
+*/
 
 /*
 HOISTING 
 
-
+Hoisting is a weird bit of javascript. It is not critical, we don't need to stress about it. 
 
 */
+var animal = "tapir";
+console.log(animal);//tapir
+
+console.log(animal);
+var animal = "tapir"; //undefined - why it's undefined this is the result of hositing. 
+//when js interpretes our code it hoists up our variable declaration. 
+//it's esentially doing the following
+var animal;
+animal = "tapir"
+console.log(animal); //tapir
+//we just need to make sure we are delcaring our variables before we use them.
+
+let shrimp = "Shrimp"; 
+console.log(shrimp)//"Shrimp"
+
+console.log(shrimp);
+let shrimp = "Shrimp" //reference error: cannot access 'shrimp' before initialization. 
+//unlike with var, let is not hoisted. This is one of the main reasons we use let. 
+//LET IS NOT HOISTED/CONST HAS THE SAME BEHAVIOUR AS LET, IT IS NOT HOISTED.
+
+howl(); //AWWWWOOO
+//this works, so our function delcarations are hoisted! 
+//we can think of our function declarations as going to the top of our file. 
+
+function howl() {
+    console.log("AWWWWOOO"); 
+}
+//if we write out function using a function expression, it will not work. 
+hoot()
+var hoot = function() {
+    console.log("HOOOO HOOOO")
+}
+//this doesn't work. While the variable is hoisted, the value is not! 
+
+
+
 
 
 /*
