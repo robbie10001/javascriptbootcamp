@@ -376,18 +376,54 @@ console.log(isNiceWeather(35))//false
 
 
 
-
-
-
-
-
-
 /*
-CALLBACKS 
+CALLBACK FUNCTIONS 
 
+Callback functions are a function passed into another function as an argument, 
+which is then invoked inside the outer function.
 
+function callTwice(func) {
+    func();
+    func();
+}
+//we have another function laugh. 
+function laugh() {
+    console.log("HAHAHAHAHAHAAHAHAHAH");
+}
+//if we call the function callTwine and laugh, we print out laugh twice. 
+console.log(callTwice(laugh));
+//on the above line, where we called laugh is the callback function. 
+//it is called within the outer function callTwice. 
+
+Anytime we pass a function to another function and its excuded within that function we call this a callback.
+Callbacks are very common in javascript. 
+heaps of the built in method expect a callback function.
+Often we use an anoynomus function when we are using callbacks
 
 */
+
+function grumpus() {
+    alert("GAHHH GO AWAY!")
+}
+
+
+//setTimeout is an inbuilt function in Javascript. 
+//It runs a block of code, after a certain number of seconds
+//the first argument we need to pass it is an argument. 
+setTimeout(grumpus, 5000)
+//after 5 seconds, we get an alert.
+//setTimeout recieves a function and a number of milliseconds. 
+//we can also do this inline using an annonymus function. 
+setTimeout(function(){
+    alert("WELCOME");
+}, 5000); 
+//this annyonmous function is good when we don't want to use a function again. 
+//It will send an alert in 5 seconds like the first example. 
+
+
+
+
+
 
 
 /*
