@@ -291,12 +291,95 @@ pickOne(cry, laugh)
 //we then get a random number out of the function. 
 //based on this number, we either print out the cry or laugh function. 
 
+console.log("---------break---------")
 /*
 FUNCTIONS AS RETURN VALUES  
 
 
 
+
 */
+//we can think of these functions as function factories. 
+//the function itself returns another function. 
+//the outer functions are changing a function and returning it so we can use it. 
+function makeBetweenFunc(min, max){
+    return function (val) {
+        return val >= min && val <= max;
+    }
+}
+const inAgeRange = makeBetweenFunc(18, 100);
+
+console.log(inAgeRange(17)); //false
+console.log(inAgeRange(68)); //true 
+
+const triple = multiplyBy(3)
+triple(5); //15
+
+//this multiplybY FUNCTION returns a new function we can save and use. 
+
+const double = multiplyBy(2); 
+double(8); //16
+
+function multiplyBy(num){
+    //this is where function expressions come in.
+    //we don't have to declare a seperare function first and then declare that. 
+    //we can write an annonymus function. 
+    return function() {
+        console.log("BLAH")//Blah Blah
+    }
+}
+
+function multiplication(num){
+    //this function as num set to 3. 
+        return function (x) {
+        return x * num;
+    }
+}
+const byThrees = multiplication(3);
+console.log(byThrees(5)); //15
+const doubles = multiplication(2);
+console.log(doubles(5));//10
+const halve = multiplication(0.5);
+console.log(halve(3))//1.5
+
+
+//we define our function, that takes two numbers.
+
+function makeBetweenFunc(min, max) {
+//it needs to return a function that accepts a number(val). 
+//we want to compair that value to min and max. 
+//if val is between min and max true else false. 
+    return function (val) {
+        return val >= min && val<= max;
+//this is a boolean expression, it returns either true or false. 
+    }
+}
+//FUNCTION 1  
+const inRange = makeBetweenFunc(18, 100); 
+//in this function anyone under 18 is false 
+inRange(17); //false
+//anyone between 18 and 100 is true. 
+inRange(68); //true
+//FUNCTION 2 
+const isChild = makeBetweenFunc(0, 18)
+//in the function isChild is true between 0 and 18
+console.log(isChild(5)); //true
+//isChild is false if greater than 18. 
+console.log(isChild(60)); //false 
+//FUNCTION 3 
+const isNiceWeather = makeBetweenFunc(20, 25)
+console.log(isNiceWeather(24))//true
+console.log(isNiceWeather(35))//false
+
+//we are making a factory for functions that serve to check is a value is between one number and another number.
+//All of our functions have been altered slightly to be different. 
+
+
+
+
+
+
+
 
 
 /*
