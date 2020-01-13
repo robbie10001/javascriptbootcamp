@@ -44,14 +44,65 @@ function birdWatching(){
 birdWatching()
 console.log(bird);//duck 
 
-
-
 /*
 BLOCK SCOPE 
 
-
+Block scope is a very important concept about how variables work in javascript. 
+blocks is javascript are denoted by { }, curly braces. 
+examples of blocks are if statements, for loops and while loops for example. 
+Let and Const have different scoping to var. 
+Let and const have block scoping while var only has function scoping. 
+let, cost and var are three ways of declaring variables. 
+let and const cannot be redelcared. We can change let but not redeclare it. 
+Let and const are blocked scoped, var is not! 
 
 */
+//this the behaviour of let and const 
+if(true){
+    let animal = "eel"
+    console.log(animal)//eel 
+}
+//animal is scope to the block above us. 
+//console.log(animal)//animal is not defined! 
+
+if(true){
+    var animals = "eel"
+    console.log(animals)//eel 
+}
+//if we use var we can still get access to the value of animals outside of the block scope. 
+console.log(animals)//eel 
+//let and const have different scoping rules to var. 
+//Var is scoped to functions, there is no block scoping for var. 
+let mammals = ["bear", "cat", "dog"]
+for(var i = 0; i < mammals.length; i++) {
+    console.log(i, animals[i])
+    //0, "e", 1, "e", 2 "l"
+}
+console.log(i)//3 
+//because we use var, we have access to i after the loop. This could have a number of different consequences which aren't good! 
+
+//[1,3,5]
+//[2,6,10]
+//we define a function that takes a single argument
+function doubleArr(arr){
+    //define a new array which is empty 
+    //this const is defined in the function so is scoped to the function. 
+    const results = [];
+    //we have a for loop that goes through for the length of the array 
+    for(let num of arr){
+        let double = num * 2; 
+        //double is scoped to this block of code. 
+        results.push(double);
+        //we still have access to results. Within a block we have access to variables defined outside the block in this function. 
+    }
+    //because results is defined with functional scope, we can call it here. 
+    console.log(results);
+};
+doubleArr([1,2,3]);
+//this returns 2,4,6 
+
+
+
 
 
 /*
