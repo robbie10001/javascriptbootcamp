@@ -149,8 +149,6 @@ WE ARE ABLE TO STORE OUR FUNCTION IN A VARIABLE BECAUSE, FUNCTIONS ARE OBJECTS.
 we can store them in a variable, we can store 10 of them in an array, we can even pass them around as arguments.
 We do this all the time. 
 
-
-
 */
 //we have a variable called square. 
 //it holds a function(an object) an it takes an argument.
@@ -181,9 +179,55 @@ console.log(product(3, 4));//12
 /*
 HIGHER ORDER FUNCTIONS
 
-
+Function are objects, what does this mean? 
+We can store a function in a variable or an array for example. 
 
 */
+//function statement 
+function add(x, y) {
+    return x + y;
+}
+//function expresion 
+const subtract = function(x, y) {
+    return x - y; 
+}
+
+//function statement
+function multiply(x, y) {
+    return x * y; 
+}
+   
+//function expression
+const divide = function(x, y) {
+    return x / y; 
+}
+//we have created an array which holds our four functions. 
+const operations =[add, subtract, multiply, divide];
+
+console.log(operations); //[ [function: add], [function: subtract], [function: multiply], [function:divide]]
+console.log(operations[0](100, 4)); //this calls the add function (index 0) of our array, and prints 104. 
+console.log(operations[1](100, 4));//this calls the subract function (index 1) and therefore the answer is 96.
+console.log(operations[2](100, 4));//this calls the multiply function (index 2) and threfore returns 400.
+console.log(operations[3](100, 4));//this calls the divide function and therefore divides 100/4 and logs 25. 
+
+console.log("---------BREAK--------")
+
+//we can do things like loop over our array of functions. 
+for(let i of operations){
+    let result =i(30, 5);
+    console.log(result);//THIS PRINTS OUT 35(addition), 25(subtract), 150(times), 6(divide)
+}
+
+//this is creating a method
+const thing = {
+    doSomething: multiply
+}
+//we are creating an object which has the key of doSomething for the value of multiply.
+console.log(thing.doSomething(50, 2))//100 
+//we then call the object with the paramaters 50, 2 which ends up being 50 x 2 = 100
+
+
+
 
 
 /*
